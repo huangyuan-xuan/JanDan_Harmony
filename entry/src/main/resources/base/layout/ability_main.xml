@@ -5,15 +5,29 @@
     ohos:width="match_parent"
     ohos:alignment="center"
     ohos:orientation="vertical">
+    <TabList
+        ohos:background_element="$graphic:main_tablist_bg"
+        ohos:id="$+id:tab_list"
+        ohos:bottom_padding="1vp"
+        ohos:tab_margin="24vp"
+        ohos:tab_length="140vp"
+        ohos:text_size="20fp"
+        ohos:height="36vp"
+        ohos:normal_text_color="#666666"
+        ohos:selected_text_color="#ffffff"
+        ohos:selected_tab_indicator_color="#ffffff"
+        ohos:selected_tab_indicator_height="2vp"
+        ohos:width="match_parent"
+        ohos:layout_alignment="center"
+        ohos:orientation="horizontal"
+        ohos:text_alignment="center"/>
 
-    <Text
-        ohos:id="$+id:text_helloworld"
-        ohos:height="match_content"
-        ohos:width="match_content"
-        ohos:background_element="$graphic:background_ability_main"
-        ohos:layout_alignment="horizontal_center"
-        ohos:text="$string:mainability_HelloWorld"
-        ohos:text_size="40vp"
-        />
+    <PageSlider
+        ohos:background_element="$graphic:main_pageslide"
+        ohos:id="$+id:page_slider"
+        ohos:height="match_parent"
+        ohos:width="match_content"/>
+
+
 
 </DirectionalLayout>
