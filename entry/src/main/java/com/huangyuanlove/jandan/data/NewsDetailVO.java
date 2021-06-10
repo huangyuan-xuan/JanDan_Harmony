@@ -45,4 +45,10 @@ public class NewsDetailVO implements Serializable {
         this.modified = modified;
     }
 
+    @Override
+    public String toString() {
+        return "NewsDetailVO{" +
+                "content='" + content + '\'' +
+                '}';
+    }
 }

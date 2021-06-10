@@ -91,4 +91,11 @@ public class PicsVO {
     public void setComment_ID(String comment_ID) {
         this.comment_ID = comment_ID;
     }
+
+    @Override
+    public String toString() {
+        return "PicsVO{" +
+                "pics=" + pics +
+                '}';
+    }
 }

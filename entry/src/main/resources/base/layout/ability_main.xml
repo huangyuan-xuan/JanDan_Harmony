@@ -22,11 +22,15 @@
         ohos:orientation="horizontal"
         ohos:text_alignment="center"/>
 
-    <PageSlider
-        ohos:background_element="$graphic:main_pageslide"
-        ohos:id="$+id:page_slider"
-        ohos:height="match_parent"
-        ohos:width="match_content"/>
+    <StackLayout
+        ohos:id="$+id:main_fraction"
+        ohos:width="match_parent"
+        ohos:height="match_parent"/>
+<!--    <PageSlider-->
+<!--        ohos:background_element="$graphic:main_pageslide"-->
+<!--        ohos:id="$+id:page_slider"-->
+<!--        ohos:height="match_parent"-->
+<!--        ohos:width="match_content"/>-->
 
 
 

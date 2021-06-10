@@ -14,6 +14,7 @@ import retrofit2.http.Query;
  */
 
 public interface PicsInterface {
+//    https://i.jandan.net/?oxwlxojflwblxbsapi=jandan.get_pic_comments&page=1
     @GET("?oxwlxojflwblxbsapi=jandan.get_pic_comments")
     Call<RequestResultBean<PicsVO>> getPics(@Query("page") int page);
 

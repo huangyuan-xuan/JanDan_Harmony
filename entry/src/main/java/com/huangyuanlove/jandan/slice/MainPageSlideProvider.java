@@ -1,16 +1,15 @@
 package com.huangyuanlove.jandan.slice;
 
-import ohos.agp.colors.RgbColor;
-import ohos.agp.components.*;
-import ohos.agp.components.element.ShapeElement;
-import ohos.agp.utils.Color;
-import ohos.agp.utils.TextAlignment;
+import ohos.aafwk.ability.fraction.Fraction;
+import ohos.agp.components.Component;
+import ohos.agp.components.ComponentContainer;
+import ohos.agp.components.PageSliderProvider;
 
 import java.util.List;
 
 public class MainPageSlideProvider extends PageSliderProvider {
-    private List<String> list;
-    public MainPageSlideProvider(List<String> list) {
+    private List<Fraction> list;
+    public MainPageSlideProvider(List<Fraction> list) {
         this.list = list;
     }
     @Override
@@ -20,21 +19,9 @@ public class MainPageSlideProvider extends PageSliderProvider {
 
     @Override
     public Object createPageInContainer(ComponentContainer componentContainer, int i) {
-        Text label = new Text(null);
-        label.setTextAlignment(TextAlignment.CENTER);
-        label.setLayoutConfig(
-                new StackLayout.LayoutConfig(
-                        ComponentContainer.LayoutConfig.MATCH_PARENT,
-                        ComponentContainer.LayoutConfig.MATCH_PARENT
-                ));
-        label.setText(list.get(i));
-        label.setTextColor(Color.BLACK);
-        label.setTextSize(50);
-        ShapeElement element = new ShapeElement();
-        element.setRgbColor(RgbColor.fromArgbInt(Color.getIntColor("#AFEEEE")));
-        label.setBackground(element);
-        componentContainer.addComponent(label);
-        return label;
+        Component component = list.get(i).getComponent();
+        componentContainer.addComponent(component);
+        return component;
     }
 
     @Override
