@@ -11,7 +11,8 @@ public class MyApplication extends AbilityPackage {
     @Override
     public void onInitialize() {
         super.onInitialize();
-        retrofit = new Retrofit.Builder().baseUrl("https://i.jandan.net/")
+        retrofit = new Retrofit.Builder()
+                .baseUrl("https://api.jandan.net/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
     }

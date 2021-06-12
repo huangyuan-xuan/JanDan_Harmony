@@ -7,14 +7,17 @@ import ohos.agp.components.Component;
 import ohos.agp.components.ComponentContainer;
 import ohos.agp.components.LayoutScatter;
 
-public class ShotPictureFraction extends Fraction {
+public class TreeHoleFraction extends Fraction {
 
+    private Component component;
 
     @Override
     protected Component onComponentAttached(LayoutScatter scatter, ComponentContainer container, Intent intent) {
-        Component component=  scatter.parse(ResourceTable.Layout_fraction_shot_picture,container,false);
+        component = scatter.parse(ResourceTable.Layout_fraction_complaints,container,false);
+
         return component;
     }
+
 
     @Override
     protected void onStart(Intent intent) {

@@ -25,6 +25,7 @@ dependencies {
     implementation "io.reactivex.rxjava3:rxjava:3.0.13"
     implementation 'com.google.code.gson:gson:2.8.7'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'io.openharmony.tpc.thirdlib:glide:1.0.6'
 }
 decc {
     supportType = ['html','xml']

@@ -4,12 +4,10 @@
     ohos:height="match_parent"
     ohos:width="match_parent"
     ohos:orientation="vertical">
-    <Text
-        ohos:id="$+id:info"
-        ohos:text_size="34vp"
-        ohos:text="新鲜事"
-        ohos:background_element="$graphic:main_pageslide"
-        ohos:height="match_parent"
-        ohos:width="match_parent"/>
+
+<ListContainer
+    ohos:id="$+id:news_list"
+    ohos:height="match_parent"
+    ohos:width="match_parent"/>
 
 </DirectionalLayout>

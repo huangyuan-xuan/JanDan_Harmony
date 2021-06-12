@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_content"
+    ohos:width="match_parent"
+    ohos:orientation="vertical"
+    >
+    <DependentLayout
+
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:padding="10vp">
+
+        <Image
+            ohos:clip_alignment="center"
+ohos:scale_mode="inside"
+            ohos:id="$+id:news_image"
+            ohos:height="60vp"
+            ohos:width="80vp"
+            ohos:align_parent_end="true"
+            ohos:align_parent_top="true"/>
+
+        <Text
+            ohos:multiple_lines="true"
+            ohos:text_size="14vp"
+            ohos:id="$+id:news_title"
+            ohos:height="match_content"
+            ohos:width="match_parent"
+            ohos:align_parent_start="true"
+            ohos:align_parent_top="true"
+            ohos:left_of="$id:news_image"
+            ohos:max_text_lines="2"
+            ohos:text="学习中间的休息非常重要：脑神经回放学习记忆的速度高了20倍"
+            ohos:text_color="#333333"
+            ohos:truncation_mode="ellipsis_at_end"/>
+
+        <Text
+            ohos:text_size="14vp"
+            ohos:id="$+id:news_author"
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:align_bottom="$id:news_image"
+            ohos:align_parent_start="true"
+            ohos:text="majer"
+            ohos:text_color="#999999"/>
+
+        <Text
+            ohos:text_size="12vp"
+            ohos:id="$+id:news_time"
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:align_bottom="$id:news_image"
+            ohos:left_margin="5vp"
+            ohos:max_text_lines="2"
+            ohos:right_of="$id:news_author"
+            ohos:text="20分钟之前"
+            ohos:text_color="#999999"/>
+
+        <Text
+            ohos:id="$+id:news_common"
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:align_bottom="$id:news_image"
+            ohos:left_of="$id:news_image"
+            ohos:right_margin="5vp"
+            ohos:text="11评论"
+            ohos:text_color="#999999"/>
+    </DependentLayout>
+
+    <Component
+        ohos:height="1vp"
+        ohos:width="match_parent"
+        ohos:background_element="$graphic:item_divider"
+        ohos:below="$id:news_image"
+        ohos:bottom_margin="2vp"
+        ohos:top_margin="2vp"/>
+</DirectionalLayout>
+
