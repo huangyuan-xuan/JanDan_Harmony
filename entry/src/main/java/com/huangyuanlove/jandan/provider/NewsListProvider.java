@@ -31,7 +31,7 @@ public class NewsListProvider extends BaseItemProvider {
 
     @Override
     public Object getItem(int position) {
-        if (data != null && position >= 0 && position < data.size()){
+        if (data != null && position >= 0 && position < data.size()) {
             return data.get(position);
         }
         return null;
@@ -46,41 +46,53 @@ public class NewsListProvider extends BaseItemProvider {
     public Component getComponent(int position, Component convertComponent, ComponentContainer componentContainer) {
         final Component cpt;
 
+        NewsHolder newsHolder;
+        NewResult.Posts post = data.get(position);
         if (convertComponent == null) {
             cpt = LayoutScatter.getInstance(componentContainer.getContext()).parse(ResourceTable.Layout_item_news, null, false);
+            newsHolder = new NewsHolder(cpt);
+            cpt.setTag(newsHolder);
         } else {
             cpt = convertComponent;
+            newsHolder = (NewsHolder) cpt.getTag();
         }
-        NewResult.Posts post = data.get(position);
-        Text titleText = (Text) cpt.findComponentById(ResourceTable.Id_news_title);
-        titleText.setText(post.title);
-
-        Text news_author = (Text) cpt.findComponentById(ResourceTable.Id_news_author);
-        news_author.setText(post.author.name);
-
-            Text news_time = (Text) cpt.findComponentById(ResourceTable.Id_news_time);
-        news_time.setText(post.date);
-
-          Text news_common = (Text) cpt.findComponentById(ResourceTable.Id_news_common);
-          if(post.commentCount ==0 || !"open".equalsIgnoreCase(post.commentStatus)){
-              news_common.setVisibility(Component.INVISIBLE);
-          }else{
-              news_common.setVisibility(Component.VISIBLE);
-              news_common.setText(post.commentCount +"评论");
-          }
-          Image newsImage = (Image) cpt.findComponentById(ResourceTable.Id_news_image);
-          if(post.customFields.thumbC!=null && post.customFields.thumbC.size()>0){
-              Glide.with(componentContainer.getContext())
-                      .load(post.customFields.thumbC.get(0))
-                      .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
-                      .skipMemoryCache(false)
-                      .placeholder(ResourceTable.Media_news_image)
-                      .into(newsImage);
-          }
 
 
-
-
+        newsHolder.newsTitle.setText(post.title);
+        newsHolder.newsAuthor.setText(post.author.name);
+        newsHolder.newsTime.setText(post.date);
+        if (post.commentCount == 0 || !"open".equalsIgnoreCase(post.commentStatus)) {
+            newsHolder.newsCommon.setVisibility(Component.INVISIBLE);
+        } else {
+            newsHolder.newsCommon.setVisibility(Component.VISIBLE);
+            newsHolder.newsCommon.setText(post.commentCount + "评论");
+        }
+        if (post.customFields.thumbC != null && post.customFields.thumbC.size() > 0) {
+            Glide.with(componentContainer.getContext())
+                    .load(post.customFields.thumbC.get(0))
+                    .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
+                    .skipMemoryCache(false)
+                    .placeholder(ResourceTable.Media_news_image)
+                    .into(newsHolder.newsImage);
+        }
         return cpt;
     }
+
+    private static class NewsHolder {
+        Image newsImage;
+        Text newsTitle;
+        Text newsAuthor;
+        Text newsTime;
+        Text newsCommon;
+
+        NewsHolder(Component component) {
+            newsTitle = (Text) component.findComponentById(ResourceTable.Id_news_title);
+            newsAuthor = (Text) component.findComponentById(ResourceTable.Id_news_author);
+            newsTime = (Text) component.findComponentById(ResourceTable.Id_news_time);
+            newsCommon = (Text) component.findComponentById(ResourceTable.Id_news_common);
+            newsImage = (Image) component.findComponentById(ResourceTable.Id_news_image);
+        }
+
+    }
+
 }
