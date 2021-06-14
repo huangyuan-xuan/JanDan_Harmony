@@ -4,10 +4,9 @@
     ohos:height="match_parent"
     ohos:width="match_parent"
     ohos:orientation="vertical">
-    <Text
-        ohos:text_size="34vp"
-        ohos:text="随手拍"
-        ohos:background_element="$graphic:main_pageslide"
+
+    <ListContainer
+        ohos:id="$+id:girls_list"
         ohos:height="match_parent"
         ohos:width="match_parent"/>
 </DirectionalLayout>

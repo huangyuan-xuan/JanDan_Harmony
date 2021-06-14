@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<DirectionalLayout
+<DependentLayout
     xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    xmlns:app="http://schemas.huawei.com/apk/res/ohos"
     ohos:height="match_parent"
-    ohos:width="match_parent"
-    ohos:orientation="vertical">
-    <Text
-        ohos:id="$+id:info"
-        ohos:text_size="34vp"
-        ohos:text="无聊图"
-        ohos:background_element="$graphic:main_pageslide"
-        ohos:height="match_parent"
-        ohos:width="match_parent"/>
+    ohos:width="match_parent">
 
-</DirectionalLayout>
+
+    <ListContainer
+        ohos:id="$+id:funny_picture_list"
+        ohos:height="match_parent"
+        ohos:width="match_parent"
+        ohos:rebound_effect="true"/>
+
+
+</DependentLayout>

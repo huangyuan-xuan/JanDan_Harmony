@@ -1,0 +1,20 @@
+{
+  "color": [
+    {
+      "name": "util__color",
+      "value": "#ff00ff"
+    },
+    {
+      "name": "load_more",
+      "value": "#ffff00"
+    },
+    {
+      "name": "refresh_color",
+      "value": "#00ffff"
+    },
+    {
+      "name": "text_color",
+      "value": "#FF34B1B1"
+    }
+  ]
+}

@@ -14,7 +14,7 @@ ohos {
             }
         }
     }
-    
+
 }
 
 dependencies {
@@ -26,6 +26,9 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.7'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation 'io.openharmony.tpc.thirdlib:glide:1.0.6'
+    implementation 'io.openharmony.tpc.thirdlib:picasso:1.0.4'
+implementation('com.gitee.chinasoft_ohos:ShadowLayout:0.0.1-SNAPSHOT')
+    implementation 'io.openharmony.tpc.thirdlib:CircleRefreshLayout-library:1.0.1'
 }
 decc {
     supportType = ['html','xml']

@@ -31,7 +31,8 @@ public class Pictures {
     public int voteNegative;
     @SerializedName("images")
     public List<Images> images;
-
+    @SerializedName("sub_comment_count")
+    public int subCommentCount;
     public static class Images {
         @SerializedName("url")
         public String url;

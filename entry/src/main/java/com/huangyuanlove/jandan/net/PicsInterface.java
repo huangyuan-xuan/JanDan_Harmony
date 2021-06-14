@@ -13,6 +13,6 @@ public interface PicsInterface {
      * https://api.jandan.net/api/v1/comment/list/26402?start_id=4939848
      * “start_id” 开始的id， start_id不传默认取最近的
      */
-    @GET("https://api.jandan.net/api/v1/comment/list/26402?start_id=4939848")
+    @GET("https://api.jandan.net/api/v1/comment/list/26402")
     Call<CommonRequestResult<Pictures>> getPics(@QueryMap Map<String,Integer> queryMap);
 }

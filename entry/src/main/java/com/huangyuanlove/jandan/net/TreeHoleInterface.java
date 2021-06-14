@@ -11,6 +11,6 @@ import java.util.Map;
 public interface TreeHoleInterface {
 
     //https://api.jandan.net/api/v1/comment/list/102312
-    @GET("https://api.jandan.net/api/v1/comment/list/102312?start_id=4939848")
+    @GET("https://api.jandan.net/api/v1/comment/list/102312")
     Call<CommonRequestResult<TreeHole>> getTreeHolePost(@QueryMap Map<String,Integer> queryMap);
 }

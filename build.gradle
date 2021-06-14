@@ -28,7 +28,9 @@ buildscript {
         maven {
             url 'https://developer.huawei.com/repo/'
         }
-        jcenter()
+        maven {
+            url 'https://s01.oss.sonatype.org/content/repositories/snapshots/'
+        }
     }
     dependencies {
         classpath 'com.huawei.ohos:hap:2.4.4.2'
@@ -44,6 +46,8 @@ allprojects {
         maven {
             url 'https://developer.huawei.com/repo/'
         }
-        jcenter()
+        maven {
+            url 'https://s01.oss.sonatype.org/content/repositories/snapshots/'
+        }
     }
 }

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_content"
+    ohos:width="match_parent"
+    ohos:orientation="vertical"
+    ohos:padding="10vp">
+
+    <Text
+        ohos:id="$+id:tree_hole_author"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:text="作者"
+        ohos:text_color="#333333"
+        ohos:text_size="14vp"
+        ohos:top_margin="10vp"/>
+
+    <Text
+        ohos:id="$+id:tree_hole_time"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:text="刚刚"
+        ohos:text_color="#666666"
+        ohos:text_size="12vp"
+        ohos:top_margin="10vp"/>
+
+    <Text
+        ohos:truncation_mode="none"
+        ohos:multiple_lines="true"
+        ohos:id="$+id:tree_hole_content"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:text="燃起来了"
+        ohos:text_color="#333333"
+        ohos:text_size="14vp"
+        ohos:top_margin="10vp"/>
+
+
+
+    <DependentLayout
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:bottom_margin="10vp"
+        ohos:orientation="horizontal"
+        ohos:top_margin="10vp">
+
+        <Text
+            ohos:id="$+id:tree_hole_vote_positive"
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:align_parent_start="true"
+            ohos:text="00 127"
+            ohos:text_color="#666666"
+            ohos:text_size="12vp"/>
+
+        <Text
+            ohos:id="$+id:tree_hole_vote_negative"
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:left_margin="10vp"
+            ohos:right_of="$id:tree_hole_vote_positive"
+            ohos:text="xxx 63"
+            ohos:text_color="#666666"
+            ohos:text_size="12vp"/>
+
+        <Text
+            ohos:id="$+id:tree_hole_sub_comment_count"
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:left_margin="10vp"
+            ohos:right_of="$id:tree_hole_vote_negative"
+            ohos:text="吐槽 31"
+            ohos:text_color="#666666"
+            ohos:text_size="12vp"/>
+
+        <Text
+            ohos:right_of="$id:tree_hole_sub_comment_count"
+            ohos:left_margin="10vp"
+            ohos:id="$+id:tree_hole_more"
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:text="~~~"
+            ohos:weight="1"/>
+
+    </DependentLayout>
+
+</DirectionalLayout>
+
+

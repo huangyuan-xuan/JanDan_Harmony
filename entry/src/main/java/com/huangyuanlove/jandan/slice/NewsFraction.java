@@ -9,6 +9,9 @@ import io.reactivex.rxjava3.annotations.Nullable;
 import ohos.aafwk.ability.fraction.Fraction;
 import ohos.aafwk.content.Intent;
 import ohos.agp.components.*;
+import ohos.agp.utils.LayoutAlignment;
+import ohos.agp.window.dialog.ToastDialog;
+import ohos.hiviewdfx.HiLog;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -36,7 +39,11 @@ public class NewsFraction extends Fraction {
 
             @Override
             public void onFailure(Call<NewResult> call, Throwable t) {
-
+                HiLog.debug(MainAbilitySlice.LABEL,"request for news failure" + t.toString());
+                new ToastDialog(container.getContext())
+                        .setText("请求出错")
+                        .setAlignment(LayoutAlignment.CENTER)
+                        .show();
             }
         });
         return component;

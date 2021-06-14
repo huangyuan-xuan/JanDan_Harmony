@@ -12,7 +12,7 @@ import ohos.hiviewdfx.HiLogLabel;
 import java.util.ArrayList;
 
 public class MainAbilitySlice extends AbilitySlice {
-    private static final HiLogLabel LABEL = new HiLogLabel(HiLog.LOG_APP, 0x00201, "MY_TAG");
+    public static final HiLogLabel LABEL = new HiLogLabel(HiLog.LOG_APP, 0x00201, "MY_TAG");
     private TabList tabList;
     private ArrayList<Fraction> fractions;
     @Override
