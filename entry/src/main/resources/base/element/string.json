@@ -7,7 +7,18 @@
     {
       "name": "mainability_description",
       "value": "煎蛋首页"
+    },
+    {
+      "name": "newsdetailability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "newsdetailability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "entry_NewsDetailAbility",
+      "value": "entry_NewsDetailAbility"
     }
-
   ]
 }

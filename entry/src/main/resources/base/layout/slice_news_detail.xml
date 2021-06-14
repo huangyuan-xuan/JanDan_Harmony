@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+
+    <Image
+        ohos:id="$+id:news_detail_image"
+        ohos:height="match_parent"
+        ohos:width="match_content"/>
+    <Component
+        ohos:id="$+id:news_detail_divider"
+        ohos:height="match_content"
+        ohos:width="1vp"/>
+    <WebView
+        ohos:id="$+id:news_detail_web"
+        ohos:height="match_parent"
+        ohos:width="match_parent"/>
+</DirectionalLayout>

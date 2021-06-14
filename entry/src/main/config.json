@@ -14,7 +14,6 @@
       }
     }
   },
-
   "module": {
     "package": "com.huangyuanlove.jandan",
     "name": ".MyApplication",
@@ -46,6 +45,23 @@
         "icon": "$media:icon",
         "description": "$string:mainability_description",
         "label": "$string:entry_MainAbility",
+        "type": "page",
+        "launchType": "standard"
+      },
+      {
+        "skills": [
+          {
+
+            "actions": [
+              "ability.intent.NEWS_DETAIL"
+            ]
+          }
+        ],
+        "orientation": "unspecified",
+        "name": "com.huangyuanlove.jandan.NewsDetailAbility",
+        "icon": "$media:icon",
+        "description": "$string:newsdetailability_description",
+        "label": "$string:entry_NewsDetailAbility",
         "type": "page",
         "launchType": "standard"
       }
